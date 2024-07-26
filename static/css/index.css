@@ -6,10 +6,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #1e1e1e; /* Cor de fundo escura para o tema do jogo */
-    color: #ccc; /* Texto claro para contraste com o fundo escuro */
+    background-color: #1e1e1e; /* Cor de fundo escura para o tema */
+    color: #e0e0e0; /* Texto claro para contraste com o fundo escuro */
 }
 
 .container {
@@ -20,9 +20,11 @@ body {
 }
 
 header {
-    background-color: #ccac00; /* Cor dourada para combinar com o tema medieval */
-    color: #fff;
+    background-color: #333; /* Preto escuro para o cabeçalho */
+    color: #ffcc00; /* Amarelo para o texto */
     padding: 20px 0;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Sombra para dar profundidade */
 }
 
 header h1 {
@@ -42,36 +44,50 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffcc00; /* Amarelo para links */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Amarelo mais claro ao passar o mouse */
+    transform: translateY(-3px); /* Pequeno efeito de elevação */
 }
 
 .hero {
-    background: url('../img/elden-ring-bg.jpg') no-repeat center center/cover; /* Imagem de fundo do jogo */
-    color: #fff;
+    background: url('../img/bodybuilding-bg.jpg') no-repeat center center/cover; /* Imagem de fundo */
+    color: #ffcc00; /* Amarelo para o texto */
     padding: 100px 20px;
     text-align: center;
+    border-radius: 10px; /* Bordas arredondadas */
+    animation: floating 5s ease-in-out infinite; /* Animação de floating */
 }
 
 .hero h2 {
     margin-bottom: 20px;
-    font-size: 3em; /* Aumentei o tamanho do texto para dar mais destaque */
+    font-size: 3em; /* Tamanho maior para dar mais destaque */
 }
 
 .hero p {
     margin-bottom: 20px;
-    font-size: 1.5em; /* Aumentei o tamanho da fonte para melhor leitura */
+    font-size: 1.5em; /* Tamanho da fonte aumentado para melhor leitura */
 }
 
 .cta-button {
-    background-color: #e63946; /* Cor de destaque no estilo de um botão de chamada */
-    color: #fff;
+    background-color: #ffcc00; /* Amarelo para o botão de chamada */
+    color: #000;
     padding: 15px 30px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 30px; /* Bordas arredondadas para o botão */
     display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para o hover */
+}
+
+.cta-button:hover {
+    background-color: #ffb300; /* Amarelo mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
 }
 
 .about,
@@ -87,25 +103,43 @@ nav ul li a {
 }
 
 .menu-item {
-    background-color: #2a2a2a; /* Fundo escuro para combinar com o tema do jogo */
-    border: 1px solid #444; /* Borda para destacar os itens */
+    background-color: #333; /* Preto escuro para o fundo dos itens */
+    border: 1px solid #444; /* Borda sutil para destacar os itens */
     padding: 20px;
     margin: 10px 0;
     width: 90%;
-    max-width: 350px; /* Aumentei a largura máxima dos itens */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Sombra mais escura para efeito de profundidade */
+    max-width: 350px; /* Largura máxima dos itens */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra mais escura para efeito de profundidade */
+    transition: transform 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
 }
 
 .menu-item h3 {
     margin-bottom: 10px;
-    color: #ccac00; /* Cor dourada para o título dos itens */
+    color: #ffcc00; /* Amarelo para o título dos itens */
 }
 
 footer {
-    background-color: #000;
-    color: #fff;
+    background-color: #000; /* Preto para o fundo do rodapé */
+    color: #ffcc00; /* Amarelo para o texto */
     text-align: center;
     padding: 10px 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.6); /* Sombra sutil para o rodapé */
+}
+
+/* Animação de floating */
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Media Queries */
